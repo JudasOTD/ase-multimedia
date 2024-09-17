@@ -10,12 +10,14 @@
 ## Objectives
 - understand how to include JavaScipt code in HTML pages
 - understand how to subscribe to events
-- undersnatd how to modify the DOM
+- understand how to modify the DOM
 
 ## Introduction
 JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language.
 
 > Most programming languages contain good and bad parts, but JavaScript has more than its share of the bad, having been developed and released in a hurry before it could be refined. (JavaScript: The Good Parts by Douglas Crockford)
+
+> Want to know more about how developers use JavaScript? Check https://stateofjs.com/en-us/
 
 ## Documentation
  - [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/JavaScript/Guide). Check especially the following topics: 
@@ -203,6 +205,8 @@ JavaScript is a cross-platform, object-oriented scripting language. It is a smal
     </script>
     ```
 4. Implement the ```addPerson()``` method that will add a new person to the phone agenda.
+    > Naming conventions for ids and classes: https://makersaid.com/how-to-name-html-ids-and-classes/ , https://www.makeuseof.com/css-class-and-id-best-naming-practices/
+
 5. Call the ```addPerson()``` method when the user clicks the "Add Person" button.
 6. Move the ```addPerson()``` method to a separte JavaScript file and reference that file in the ```<head>``` section of the page
 

@@ -44,16 +44,12 @@
 ###  4.2. <a name='Assignment2'></a>Assignment 2
 The goal of the example is to create a histogram for an image loaded using drag and drop. 
 
-> Histograms in Adobe PhotoShop: https://helpx.adobe.com/photoshop/using/viewing-histograms-pixel-values.html
-
 1. Try the "canvas-drag-drop" sample by clicking [here](https://ase-multimedia.azurewebsites.net/canvas-drag-drop). 
-
-    > HTML Drag and Drop API:
-https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
-
-2. Check the source code in the `code-examples.zip` archive or in the `code-examples` folder. 
-3. Complete the assignments included in the ```html``` file. 
-4. Allow the user to load images using `Ctrl+C` and `Ctrl+V` (hint: use the [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API)).
+2. Read about why histograms (in Adobe PhotoShop) are useful: https://helpx.adobe.com/photoshop/using/viewing-histograms-pixel-values.html
+3. In this example we are going to work with the HTML Drag and Drop API (https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API) and the ```FileReader``` object (https://developer.mozilla.org/en-US/docs/Web/API/FileReader). Please check the links in the documentation for further details.
+4. Check the source code in the `code-examples.zip` archive or in the `code-examples` folder. 
+5. Complete the assignments included in the ```html``` file. 
+6. Allow the user to load images using `Ctrl+C` and `Ctrl+V` (hint: use the [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API)).
 
 ###  4.3. <a name='Assignment3'></a>Assignment 3
 1. Try the "canvas-processing-2.html" sample by clicking [here](https://ase-multimedia.azurewebsites.net/canvas-processing-2). 
@@ -133,7 +129,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
         'use strict';
 
         var app = {
-            originialImage: null,
+            originalImage: null,
             processedImage: null,
             donwloadLink: null,
             currentEffect: null
@@ -144,7 +140,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
 7. When the `DOM` has finished loading, initialize the properties of the `app` object.
 
     ```JavaScript
-    app.originialImage = document.createElement("img");
+    app.originalImage = document.createElement("img");
     app.donwloadLink = document.getElementById("donwloadLink");
     app.processedImage = document.getElementById("processedImage");
     ```
@@ -159,10 +155,10 @@ https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
         console.log("t0: "+t0);
 
         let processingCanvas = document.createElement('canvas');
-        processingCanvas.width = app.originialImage.naturalWidth;
-        processingCanvas.height = app.originialImage.naturalHeight;
+        processingCanvas.width = app.originalImage.naturalWidth;
+        processingCanvas.height = app.originalImage.naturalHeight;
         let context = processingCanvas.getContext("2d");
-        context.drawImage(app.originialImage, 0, 0, processingCanvas.width, processingCanvas.height);
+        context.drawImage(app.originalImage, 0, 0, processingCanvas.width, processingCanvas.height);
 
         let t1 = performance.now();
         console.log(t1-t0 + ": drawing the image on the canvas");
@@ -233,29 +229,29 @@ https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
         var reader = new FileReader();
         //2. attach events
         reader.onload = function(event){
-            app.originialImage.src = event.target.result;
+            app.originalImage.src = event.target.result;
         }
         //3. start loading the file
         reader.readAsDataURL(e.target.files[0]);    
     });
     ```
 
-12. Handle the `load` event of the originialImage element in order to display the image.
+12. Handle the `load` event of the `originalImage` element in order to display the image.
 
     ```JavaScript
-    app.originialImage.addEventListener("load",function(){
+    app.originalImage.addEventListener("load",function(){
             app.currentEffect = null;
             app.changeEffect("normal");
     });
     ```
 
-13. Handle the `onerror` event of the originialImage element.
+13. Handle the `onerror` event of the `originalImage` element.
 
     ```JavaScript
-    /*app.originialImage.onerror = function (msg, source, lineNo) {
+    /*app.originalImage.onerror = function (msg, source, lineNo) {
             alert("Mesaj eroare: {0}".format(msg));
     };*/
-    app.originialImage.addEventListener("error", function (msg) {
+    app.originalImage.addEventListener("error", function (msg) {
             alert("Mesaj eroare: {0}".format(msg));
     });
     ```
