@@ -1,14 +1,15 @@
 name: Node.js CLI
 
 on:
-  push:
-    branches: [ "master" ]
   pull_request:
     branches: [ "main" ]
+  push:
+    branches: [ "master" ]
 
 env:
-    # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
+    ## Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
     BUILD_TYPE: Release
+
 
 jobs:  
   build:
