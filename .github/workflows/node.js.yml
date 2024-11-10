@@ -1,23 +1,24 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
-name: Node.js CI
+name: Node.js CLI
 
 on:
   push:
     branches: [ "master" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
-jobs:
+env:
+    # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
+    BUILD_TYPE: Release
+
+jobs:  
   build:
-
+    # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac. You may convert this to a matrix build if you need cross-platform coverage.
+    # See: http://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [18.x, 20.0, 22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        # See supported Node.js release schedule at http://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v4
@@ -29,3 +30,6 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
