@@ -2,9 +2,9 @@ name: Node.js CLI
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: [ "__main__" ]
   push:
-    branches: [ "master" ]
+    branches: [ "__master__" ]
 
 env:
     ## Customize the node_npm.js build type here (Release, Debug, RelWithDebInfo, etc.)
