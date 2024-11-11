@@ -41,7 +41,7 @@ jobs:
       # Step 2: Add a step to generate the provenance subjects
       #         as shown below. Update the sha256 sum arguments
       #         to include all binaries that you generate
-      #         provenance for.
+      #         provenance for. 
       #
       # ========================================================
       - name: Generate subject for provenance
