@@ -1,0 +1,11 @@
+
+build (18.x)
+Dependencies lock file is not found in /home/runner/work/ase-multimedia/ase-multimedia. Supported file patterns: package-lock.json,npm-shrinkwrap.json,yarn.lock
+build (22.x)
+The job was canceled because "_18_x" failed.
+build (22.x)
+The operation was canceled.
+build (20)
+The job was canceled because "_18_x" failed.
+build (20)
+The operation was canceled.
