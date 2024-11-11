@@ -1,0 +1,1 @@
+##   Yarn is a consistent package manager used to store the versions of each installed dependency. To do this, Yarn uses the "yarn.lock" file in the root of the Project's Dependency Tree.  Ensures reproducibility across multiple environments and installations.
