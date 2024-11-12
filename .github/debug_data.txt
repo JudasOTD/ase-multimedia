@@ -6,9 +6,43 @@ Dependencies lock file is not found in /home/runner/work/ase-multimedia/ase-mult
 ####################################################################################
 
 
+
 build (22.x)
 ############
 The job was canceled because "_18_x" failed. The operation was canceled.
+
+Environment details
+
+##[debug]Re-evaluate condition on job cancellation for step: 'Use Node.js 22.x'.
+##[debug]Evaluating condition for step: 'Use Node.js 22.x'
+
+
+##[debug]Evaluating:  success()
+##[debug]Evaluating success:
+##[debug]=> true
+##[debug]Result: true
+#####################
+##[debug]Starting: Use Node.js 22.x
+##[debug]Register post job cleanup for action: actions/setup-node@v4
+##[debug]Loading inputs
+##[ ! ]Evaluating: matrix.node-version
+##[debug]Evaluating Index:
+##[debug]..Evaluating matrix:
+##[debug]..=> Object
+##[debug]..Evaluating String:
+##[debug]..=> 'node-version'
+##[debug]=> '22.x'
+##[debug]Result: '22.x'
+
+
+##[debug]evaluating 4 versions
+##[debug]matched: 22.10.0
+
+
+[debug]Checking Cache: /opt/hostedtoolcache/node/22.10.0/x64
+[debug]Found tool in Cache Node 22.10.0  [x64] Found in cache @ /opt/hostedtoolcache/node/22.10.0/x64
+::group::Environment details
+
 
 
 build (20)
