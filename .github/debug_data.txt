@@ -1,9 +1,19 @@
 
+
+ #######
+ [ERROR]    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ #######    @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+  
+
+
 build (18.x)
 ############
 Dependencies lock file is not found in /home/runner/work/ase-multimedia/ase-multimedia.
 [ * ]   See Supported file patterns: package-lock.json,npm-shrinkwrap.json,yarn.lock
 ####################################################################################
+
 
 
 
@@ -38,14 +48,13 @@ Environment details
 ##[debug]evaluating 4 versions
 ##[debug]matched: 22.10.0
 
-
+::group::Environment details
 [debug]Checking Cache: /opt/hostedtoolcache/node/22.10.0/x64
 [debug]Found tool in Cache Node 22.10.0  [x64] Found in cache @ /opt/hostedtoolcache/node/22.10.0/x64
-::group::Environment details
 
 
 
 build (20)
 ##########
 The job was canceled because "_18_x" failed.
-build(20) The operation was canceled.
+[ * ]  build (20) The operation was canceled.
