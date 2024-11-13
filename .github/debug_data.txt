@@ -16,7 +16,6 @@ Dependencies lock file is not found in /home/runner/work/ase-multimedia/ase-mult
 
 
 
-
 build (22.x)
 ############
 The job was canceled because "_18_x" failed. The operation was canceled.
@@ -49,9 +48,8 @@ Environment details
 ##[debug]matched: 22.10.0
 
 ::group::Environment details
-[debug]Checking Cache: /opt/hostedtoolcache/node/22.10.0/x64
-[debug]Found tool in Cache Node 22.10.0  [x64] Found in cache @ /opt/hostedtoolcache/node/22.10.0/x64
-
+[debug]Checking Cache: /opt/node/hostedtoolcache/x64/22.10.0
+[debug]Found tool in Cache Node 22.10.0  [x64] Found in cache @ /opt/node/hostedtoolcache/x64/22.10.0 
 
 
 build(20)
