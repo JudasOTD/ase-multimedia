@@ -54,7 +54,7 @@ Environment details
 
 
 
-build (20)
+build(20)
 ##########
 The job was canceled because "_18_x" failed.
 [ * ]  build (20) The operation was canceled.
